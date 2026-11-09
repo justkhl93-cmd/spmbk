@@ -1,0 +1,382 @@
+.ds {
+  display: flex;
+  min-height: 100vh;
+  background: #35503f;
+  color: #1f2937;
+}
+
+/* ===== Sidebar ===== */
+.ds-side {
+  width: 240px;
+  flex-shrink: 0;
+  background: #8bab8a;
+  color: #fff;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.ds-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.ds-brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.ds-brand b {
+  display: block;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.ds-brand span {
+  font-size: 13px;
+}
+.ds-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ds-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+.ds-nav a.active {
+  background: #8ee88a;
+  color: #14532d;
+}
+.ds-user {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ds-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #3730a3;
+  font-weight: 700;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+}
+.ds-user b {
+  display: block;
+  font-size: 14px;
+}
+.ds-user span {
+  font-size: 12px;
+}
+
+/* ===== Konten utama ===== */
+.ds-main {
+  flex: 1;
+  min-width: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ds-banner {
+  background: #217a58;
+  color: #fff;
+  border-radius: 28px;
+  padding: 32px;
+}
+.ds-banner h1 {
+  font-size: 30px;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  max-width: 620px;
+}
+.ds-banner p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ds-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ds-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.ds-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.ds-ico {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.ds-ico.hijau { background: #e6f1ea; }
+.ds-ico.kuning { background: #fdf0c8; }
+.ds-ico.biru { background: #e3e6fb; }
+.ds-stat big {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+.ds-stat b {
+  display: block;
+  font-size: 15px;
+}
+.ds-stat span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.ds-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+.ds-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+.ds-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ds-head h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.ds-head span,
+.ds-head a {
+  font-size: 14px;
+  color: #6b7280;
+  text-decoration: none;
+}
+.ds-head a {
+  color: #166534;
+  font-weight: 600;
+}
+
+/* ===== Stepper ===== */
+.ds-steps {
+  display: flex;
+}
+.ds-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  font-size: 13px;
+}
+.ds-step .no {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  margin: 0 auto 8px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+.ds-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: calc(50% + 22px);
+  width: calc(100% - 44px);
+  height: 2px;
+  background: #d1d5db;
+}
+.ds-step.selesai .no {
+  background: #166534;
+  color: #fff;
+}
+.ds-step.selesai:not(:last-child)::after {
+  background: #166534;
+}
+.ds-step.aktif .no {
+  background: #fff;
+  border: 2px solid #166534;
+  color: #166534;
+}
+.ds-step b {
+  display: block;
+  font-size: 13px;
+}
+.ds-step span {
+  color: #6b7280;
+}
+.ds-step.selesai span,
+.ds-step.aktif span {
+  color: #166534;
+}
+
+/* ===== Jurusan ===== */
+.ds-jurusan {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.ds-jcard {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.ds-jimg {
+  height: 130px;
+  display: grid;
+  place-items: center;
+}
+.ds-jimg.hijau { background: #dcede1; }
+.ds-jimg.kuning { background: #fdefc4; }
+.ds-jimg img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+.ds-jbody {
+  padding: 18px;
+}
+.ds-jbody h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.3;
+}
+.ds-jbody p {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+.ds-kuota {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.ds-btn {
+  display: block;
+  width: 100%;
+  background: #166534;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* ===== Kolom kanan ===== */
+.ds-jadwal {
+  display: flex;
+  flex-direction: column;
+}
+.ds-jrow {
+  display: flex;
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.ds-jrow:last-child {
+  border-bottom: 0;
+}
+.ds-jrow > b {
+  width: 50px;
+  color: #166534;
+  font-size: 15px;
+}
+.ds-jrow strong {
+  display: block;
+  font-size: 15px;
+}
+.ds-jrow span {
+  font-size: 13px;
+  color: #6b7280;
+}
+.ds-syarat {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ds-syarat li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+.ds-syarat li::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 2px solid #9ca3af;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.ds-bantuan {
+  background: #fdf6c8;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #713f12;
+}
+.ds-bantuan b {
+  display: block;
+}
+.ds-bantuan span {
+  font-size: 14px;
+}
+.ds-bantuan a {
+  background: #fff;
+  color: #713f12;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===== Layar kecil ===== */
+@media (max-width: 1100px) {
+  .ds-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 800px) {
+  .ds { flex-direction: column; }
+  .ds-side { width: 100%; height: auto; position: static; }
+  .ds-stats, .ds-jurusan { grid-template-columns: 1fr; }
+}

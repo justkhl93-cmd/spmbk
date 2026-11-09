@@ -1,0 +1,498 @@
+/* ===== Kerangka ===== */
+.ad {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f7f4;
+  color: #12261b;
+}
+
+/* ===== Sidebar ===== */
+.ad-side {
+  width: 232px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background: #0b4a2c;
+  color: #e6f2ea;
+  padding: 28px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.ad-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px 28px;
+}
+.ad-brand img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+.ad-brand b {
+  display: block;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #fff;
+}
+.ad-brand span {
+  font-size: 13px;
+  color: #bfdcc8;
+}
+.ad-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ad-nav a {
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #e6f2ea;
+  text-decoration: none;
+}
+.ad-nav a.active {
+  background: #8ee88a;
+  color: #0b3320;
+  font-weight: 700;
+}
+.ad-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+.ad-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #8ee88a;
+  color: #0b3320;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ad-user b {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+}
+.ad-user span {
+  font-size: 12px;
+  color: #bfdcc8;
+}
+.ad-out {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== Konten ===== */
+.ad-main {
+  flex: 1;
+  min-width: 0;
+  padding: 28px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ad-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.ad-head h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+.ad-head p {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: #4a5e52;
+}
+.ad-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ad-upd {
+  font-size: 13px;
+  color: #4a5e52;
+}
+.ad-muted {
+  color: #4a5e52;
+}
+
+/* ===== Kartu ===== */
+.ad-card {
+  background: #fff;
+  border: 1px solid #dce6df;
+  border-radius: 16px;
+  padding: 20px;
+}
+.ad-card h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.ad-cardhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.ad-cardhead h2 {
+  margin: 0;
+}
+.ad-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.ad-stat span {
+  font-size: 14px;
+  color: #4a5e52;
+}
+.ad-stat b {
+  display: block;
+  font-size: 34px;
+  font-weight: 800;
+  color: #0b4a2c;
+  margin: 6px 0 2px;
+}
+.ad-two {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ===== Baris daftar ===== */
+.ad-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #e6ede8;
+}
+.ad-row b {
+  display: block;
+  font-size: 16px;
+}
+.ad-row small {
+  font-size: 13px;
+  color: #4a5e52;
+}
+.ad-side-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ad-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #14532d;
+}
+.ad-live::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+/* ===== Tombol ===== */
+.ad-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #0b4a2c;
+  background: #0b4a2c;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ad-btn.outline {
+  background: #fff;
+  color: #0b4a2c;
+}
+.ad-btn.amber {
+  background: #fff1cc;
+  border-color: #f5a524;
+  color: #5a3b00;
+}
+.ad-btn.sm {
+  padding: 7px 14px;
+  font-size: 13px;
+}
+.ad-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== Chip status ===== */
+.ad-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  background: #fff1cc;
+  color: #7a5200;
+}
+.ad-chip.g {
+  background: #ddf3e2;
+  color: #14532d;
+}
+.ad-chip.r {
+  background: #fde2e2;
+  color: #8a1c1c;
+}
+.ad-chip.n {
+  background: #e8eeea;
+  color: #3e5146;
+}
+
+/* ===== Layar kecil ===== */
+@media (max-width: 1100px) {
+  .ad-two {
+    grid-template-columns: 1fr;
+  }
+  .ad-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ===== Toolbar, banner, dan tabel ===== */
+.ad-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ad-input {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #6f8678;
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+  color: #12261b;
+  box-sizing: border-box;
+}
+.ad-input.grow {
+  flex: 1;
+  min-width: 240px;
+}
+.ad-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: #f0f8f2;
+  border: 1px solid #0b4a2c;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+.ad-tablecard {
+  background: #fff;
+  border: 1px solid #dce6df;
+  border-radius: 16px;
+  padding: 8px 8px 16px;
+}
+.ad-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.ad-table th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a5e52;
+  padding: 12px;
+  background: #f3f7f4;
+  border-bottom: 1px solid #dce6df;
+}
+.ad-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e6ede8;
+  vertical-align: middle;
+}
+.ad-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.ad-table tr.baru td {
+  background: #f7fcf8;
+}
+.ad-name b {
+  font-size: 15px;
+}
+.ad-name small {
+  display: block;
+  font-size: 13px;
+  color: #4a5e52;
+}
+.ad-link {
+  font-weight: 700;
+  color: #0b4a2c;
+  text-decoration: none;
+}
+.ad-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 12px 0;
+  font-size: 14px;
+  color: #4a5e52;
+}
+/* ===== Kolom, ringkasan, dan form ===== */
+.ad-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ad-kv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-top: 1px solid #e6ede8;
+  font-size: 14px;
+}
+.ad-kv span {
+  color: #4a5e52;
+}
+.ad-kv b {
+  font-weight: 700;
+}
+.ad-sub {
+  margin: -6px 0 16px;
+  font-size: 14px;
+  color: #4a5e52;
+}
+.ad-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.ad-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.ad-field .ad-input {
+  width: 100%;
+}
+.ad-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.ad-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: #0b4a2c;
+  margin: 0;
+}
+/* ===== Verifikasi ===== */
+.ad-tabs {
+  display: flex;
+  gap: 10px;
+}
+.ad-split {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.ad-queue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #dce6df;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.ad-queue-item.aktif {
+  border: 2px solid #0b4a2c;
+  background: #f0f8f2;
+}
+.ad-queue-item b {
+  display: block;
+  font-size: 14px;
+}
+.ad-queue-item small {
+  font-size: 12px;
+  color: #4a5e52;
+}
+.ad-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.ad-chip.pilih {
+  outline: 2px solid #0b4a2c;
+}
+.ad-preview {
+  height: 260px;
+  border: 2px dashed #9db5a5;
+  border-radius: 12px;
+  background: #e3ebe6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a5e52;
+  font-weight: 700;
+}
+.ad-detailhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.ad-detailhead h2 {
+  margin: 0 0 2px;
+}
+/* ===== Laporan ===== */
+.ad-stats.tiga {
+  grid-template-columns: repeat(3, 1fr);
+}
+.ad-table tr.total td {
+  font-weight: 800;
+  border-top: 1px solid #dce6df;
+}

@@ -1,0 +1,94 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#3f5b4a;color:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+ul{list-style:none}
+button{font:inherit;cursor:pointer}
+.wrap{width:100%;max-width:1400px;margin:0 auto;padding:0 4%}
+.center{text-align:center}
+.h2{font-size:30px;font-weight:600}
+.sub{font-size:13px;margin-top:8px}
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;color:#1e293b;border-radius:16px;padding:22px}
+.muted{font-size:12px;color:#64748b;margin-top:8px}
+
+/* navbar */
+.nav{position:absolute;top:0;left:0;right:0;z-index:10;background:rgba(47,125,74,.8);backdrop-filter:blur(8px)}
+.nav .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:600;line-height:1.25}
+.brand img{height:40px;width:40px;object-fit:contain}
+.links{display:flex;gap:32px;font-size:14px;font-weight:500}
+.btn-login{background:#fff;color:#14532d;border-radius:999px;padding:8px 20px;font-size:14px;font-weight:600}
+
+/* hero */
+.hero{position:relative;min-height:560px;display:flex;align-items:flex-end;padding:128px 0 40px;background:#2d4a38 url(/asset/hero.jpg) center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.2) 50%,rgba(0,0,0,.3))}
+.hero .wrap{position:relative}
+.hero h1{font-size:36px;font-weight:600;line-height:1.25;letter-spacing:.04em}
+.hero p{font-size:18px;max-width:440px;margin-top:16px}
+.btn-hero{display:inline-block;margin-top:24px;background:#fff;color:#14532d;border-radius:999px;padding:12px 32px;font-weight:600}
+.stats{display:grid;gap:16px;grid-template-columns:repeat(4,1fr);margin-top:56px}
+.stat{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);backdrop-filter:blur(6px);border-radius:16px;padding:20px}
+.stat b{display:block;font-size:24px}.stat span{font-size:12px}
+
+/* alur */
+.alur{background:linear-gradient(135deg,#14532d,#3f7d51 55%,#5f9d66);padding:64px 0}
+.alur .g4{margin-top:40px}
+.badge{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#dff5e6;color:#1b8a4a;font-weight:700}
+.card b.t{display:block;margin-top:24px}
+.docs{margin-top:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{background:#dff5e6;color:#14532d;border-radius:999px;padding:6px 16px;font-size:12px;font-weight:500}
+.btn-dark{background:#054a00;color:#fff;border-radius:12px;padding:12px 24px;font-size:14px;font-weight:600}
+
+/* jurusan */
+.jurusan{padding:64px 0}
+.jurusan .g3{margin-top:40px}
+.jurusan img{height:48px;width:48px;object-fit:contain}
+.jurusan h3{font-size:20px;margin-top:12px}
+.jurusan .nama{font-size:14px;font-weight:500;color:#475569}
+.jurusan .lbl{display:block;margin-top:16px;font-size:12px}
+.jurusan li{display:flex;align-items:center;gap:8px;font-size:12px;color:#475569;margin-top:6px}
+.jurusan li::before{content:"";width:6px;height:6px;border-radius:50%;background:#1b8a4a}
+.detail{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;color:#14532d}
+
+/* jadwal */
+.jadwal{padding:48px 0}
+.jadwal .g4{margin-top:40px}
+.tgl{display:inline-block;text-align:center;background:#dff5e6;color:#1b8a4a;border-radius:8px;padding:4px 12px}
+.tgl b{display:block;font-size:14px}.tgl span{font-size:10px}
+.note{text-align:center;font-size:12px;margin-top:32px}
+
+/* bantuan */
+.bantuan{padding:64px 0}
+.help{display:grid;grid-template-columns:1.5fr 1fr;gap:32px;margin-top:40px}
+.faq{display:flex;flex-direction:column;gap:16px}
+.faq-item{background:#fff;color:#1e293b;border-radius:12px;padding:20px}
+.faq-q{width:100%;display:flex;justify-content:space-between;gap:16px;background:none;border:0;text-align:left;font-size:14px;font-weight:700;color:inherit}
+.faq-q span{font-size:18px;color:#14532d}
+.faq-a{font-size:12px;color:#64748b;line-height:1.6;margin-top:12px}
+.kontak{display:flex;flex-direction:column;gap:16px}
+.kontak .card{text-align:center;padding:24px}
+.kontak img{height:24px;width:24px}
+.kontak b{display:block;font-size:14px}
+
+/* footer */
+.footer{background:#2f4a39;padding:48px 0;font-size:14px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+.f-brand{display:flex;align-items:center;gap:12px}
+.f-brand img{height:48px;width:48px;object-fit:contain}
+.footer li{font-size:12px;margin-top:8px}
+.footer p{font-size:12px;max-width:320px;margin-top:16px}
+.copy{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);margin-top:40px;padding-top:20px;font-size:12px}
+
+/* responsif */
+@media(max-width:900px){
+  .help,.f-grid{grid-template-columns:1fr}
+  .g4,.g3{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){.links,.brand span{display:none}.hero h1{font-size:28px}}
+@media(max-width:600px){.g4,.g3{grid-template-columns:1fr}}
